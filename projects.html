@@ -4,82 +4,76 @@
     <meta charset="UTF-8">
     <title>Portfolio | Projects</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: auto; }
-        nav { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
-        section { margin-bottom: 40px; }
-        img { border-radius: 8px; margin-top: 10px; }
-        .image-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
-        .image-row img { width: 48%; min-width: 300px; height: auto; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 1100px; margin: auto; background-color: #f4f4f4; color: #333; }
+        nav { margin-bottom: 30px; border-bottom: 2px solid #ddd; padding-bottom: 15px; text-align: center; }
+        nav a { margin: 0 10px; text-decoration: none; color: #2c3e50; font-weight: bold; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 50px; }
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #e67e22; }
+        h3 { margin-top: 25px; color: #34495e; }
+        .badge { background: #34495e; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.85em; font-weight: bold; margin-right: 5px; }
+        .image-gallery { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; justify-content: center; }
+        .image-gallery img { border-radius: 8px; border: 1px solid #ddd; width: 48%; min-width: 300px; height: auto; transition: transform 0.2s; }
+        .image-gallery img:hover { transform: scale(1.02); }
+        .project-meta { font-style: italic; color: #7f8c8d; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
     <nav>
         <a href="index.html">Homepage</a> | 
-        <a href="projects.html">Portfolio/Boards Projects</a> | 
+        <a href="projects.html">Portfolio</a> | 
         <a href="objectives.html">Objectives</a> | 
         <a href="sip.html">SIP Project</a> | 
-        <a href="about.html">About/Contact</a>
+        <a href="about.html">Contact</a>
     </nav>
 
-    <h1>Portfolio & Boards Projects</h1>
-    <p>A showcase of technical design, environment art, and gameplay systems.</p>
-
-    <hr>
+    <h1>Technical Design Portfolio</h1>
+    <p style="text-align: center; max-width: 700px; margin: auto; margin-bottom: 40px;">A showcase of modeling pipelines, optimized technical art, and interactive gameplay systems developed in Unity and Unreal Engine.</p>
 
     <section>
-        <h2>VRChat: Cyber-Lounge Interior Study</h2>
-        <p><b>Role:</b> Technical Artist & Environment Designer</p>
-        <p><b>Tools:</b> Unity 2022, VRChat SDK, Baked Lighting, Light Probes</p>
-        
-        <div class="image-row">
-            <img src="Unity_jErd7410Bq.jpg" alt="Lounge view from bed">
-            <img src="Unity_kuXUYbycMl.jpg" alt="Lounge view from corner">
+        <h2>VRChat Environment: Cyber-Lounge Pipeline Study</h2>
+        <p class="project-meta"><b>Role:</b> 3D Artist & Technical Artist | <b>Tools:</b> Unity 2022, Blender 3.x, VRChat SDK</p>
+        <p><span class="badge">Proprietary Assets</span> <span class="badge">Optimized UVs</span> <span class="badge">VR Performance</span></p>
+
+        <p>This project demonstrates a full-pipeline asset workflow, moving from original modeling and UV layout in Blender to technical lighting implementation within Unity 2022 for VRChat.</p>
+
+        <h3>Part 1: Asset Creation (Blender)</h3>
+        <p>I modeled 100% of the room geometry and props shown below, focusing on clean topology for VR. The UV checker map image proves consistent texture density and optimized UV layouts, which are critical for artifact-free lightmap baking.</p>
+        <div class="image-gallery">
+            <img src="image_9.png" alt="Blender Solid Model View" title="Original geometry in Blender modeling view">
+            <img src="image_8.png" alt="Blender UV Checker Map" title="UV layout verified with checker map texture">
         </div>
 
-<h3>Technical Highlights:</h3>
-    <ul>
-        <li><b>Full-Pipeline 3D Modeling:</b> Modeled all room geometry and interior meshes, ensuring optimized poly-counts for VR performance.</li>
-        <li><b>Custom UV Mapping:</b> Authored clean UV layouts for all assets to ensure high-quality texture density and accurate lightmap baking.</li>
-        <li><b>Light Probe Integration:</b> Placed custom light probe networks to ensure dynamic avatars receive accurate color data from emissive wall panels.</li>
-        <li><b>Baked Lighting Optimization:</b> Utilized Unity's Progressive Lightmapper to achieve high-fidelity shadows while maintaining 90+ FPS for VR users.</li>
-    </ul>
+        <h3>Part 2: Implementation & Lighting (Unity 2022)</h3>
+        <p>Once imported to Unity, I designed the lighting system. I utilized Light Probes to bridge the gap between static baked geometry (walls, bed) and dynamic objects (players, interactables), ensuring avatars are lit correctly by the emissive hexagonal panels.</p>
+        <div class="image-gallery">
+            <img src="Unity_jErd7410Bq.jpg" alt="Finished Lounge (Bed View)" title="Baked lighting and bloom effects in Unity editor">
+            <img src="Unity_kuXUYbycMl.jpg" alt="Finished Lounge (Corner View)" title="Alternate view showing light probes and reflection probe placement">
+        </div>
     </section>
 
-    <hr>
-
     <section>
-        <h2>Swapper Tower System (STS)</h2>
-        <p><b>Role:</b> Systems Designer & Programmer</p>
-        <p><b>Tools:</b> Unreal Engine 5, C++, Blender</p>
+        <h2>UE5: Line Trace Puzzle Mechanics</h2>
+        <p class="project-meta"><b>Role:</b> Technical Designer & Systems Programmer | <b>Tools:</b> Unreal Engine 5.3, Blueprints</p>
+        <p><span class="badge">Line Tracing</span> <span class="badge">Verification Logic</span> <span class="badge">Level Layout</span></p>
+
+        <p>The goal of this project was to develop a "match-key-to-lock" mechanic using colored states. The player must acquire a color variable and interact with corresponding colored doors to progress.</p>
         
-        <img src="blender_LWw696tCJC.png" alt="Tower System Render" style="max-width: 100%; width: 600px;">
+        <div class="image-gallery">
+            <img src="image_11.png" alt="Maze Overhead View 1" style="width: 100%; max-width: 800px;" title="Overhead layout showing colored logic gates">
+        </div>
 
         <h3>Technical Highlights:</h3>
         <ul>
-            <li><b>Modular Logic:</b> Engineered a C++ based attachment system allowing for 3 unique weapon slots per tower base.</li>
-            <li><b>3D Asset Creation:</b> Modeled and UV-mapped prototype assets in Blender for rapid testing in UE5.</li>
-            <li><b>Gameplay Interaction:</b> Scripted logic for weapon combinations that produce unique status effects or damage buffs.</li>
+            <li><b>Interaction System:</b> Engineered a precise Line Tracing system that detects valid "Interactable" interfaces when the player presses 'E'.</li>
+            <li><b>Color Matching Logic:</b> Developed the back-end variable check that compares the player's held color state (represented by the UI sphere) against the required door color state. The door only triggers an open animation sequence upon a successful match.</li>
+            <li><b>Player Feedback Loops:</b> Implemented reactive UI and environmental cues (emissive material shifts) to confirm successful or failed interactions.</li>
         </ul>
-        <p><a href="sip.html">View Detailed Project Documentation &rarr;</a></p>
-    </section>
-
-    <hr>
-
-    <section>
-        <h2>[Your Second Project Title Here]</h2>
-        <p><b>Role:</b> [Your Role]</p>
-        <p><b>Tools:</b> [List Tools]</p>
-        
-        <p><i>Upload your next screenshot to see it here!</i></p>
-
-        <h3>Technical Highlights:</h3>
-        <ul>
-            <li>Detail a specific problem you solved.</li>
-            <li>Explain a technical tool or language you used.</li>
-            <li>Mention the outcome or goal achieved.</li>
-        </ul>
+        <div class="image-gallery">
+            <img src="image_10.png" alt="Player view in maze" title="First-person player perspective with interaction point">
+            <img src="image_12.png" alt="Maze Overhead View 2" title="Alternate overhead view detailing progression path">
+        </div>
     </section>
 
 </body>
