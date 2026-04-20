@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio | Projects</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: auto; }
+        nav { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        section { margin-bottom: 40px; }
+        img { border-radius: 8px; margin-top: 10px; }
+        .image-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+        .image-row img { width: 48%; min-width: 300px; height: auto; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Homepage</a> | 
         <a href="projects.html">Portfolio/Boards Projects</a> | 
@@ -12,7 +22,64 @@
         <a href="sip.html">SIP Project</a> | 
         <a href="about.html">About/Contact</a>
     </nav>
+
     <h1>Portfolio & Boards Projects</h1>
-    <p>Projects reflecting my major and technical skills.</p>
+    <p>A showcase of technical design, environment art, and gameplay systems.</p>
+
+    <hr>
+
+    <section>
+        <h2>VRChat: Cyber-Lounge Interior Study</h2>
+        <p><b>Role:</b> Technical Artist & Environment Designer</p>
+        <p><b>Tools:</b> Unity 2022, VRChat SDK, Baked Lighting, Light Probes</p>
+        
+        <div class="image-row">
+            <img src="Unity_jErd7410Bq.jpg" alt="Lounge view from bed">
+            <img src="Unity_kuXUYbycMl.jpg" alt="Lounge view from corner">
+        </div>
+
+        <h3>Technical Highlights:</h3>
+        <ul>
+            <li><b>Light Probe Integration:</b> Placed custom light probe networks to ensure dynamic avatars receive accurate color data from emissive wall panels.</li>
+            <li><b>Baked Lighting Optimization:</b> Utilized Unity's Progressive Lightmapper to achieve high-fidelity shadows while maintaining 90+ FPS for VR users.</li>
+            <li><b>Atmospheric Composition:</b> Balanced high-contrast emissive textures with reflective surfaces to create a futuristic social space.</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Swapper Tower System (STS)</h2>
+        <p><b>Role:</b> Systems Designer & Programmer</p>
+        <p><b>Tools:</b> Unreal Engine 5, C++, Blender</p>
+        
+        <img src="blender_LWw696tCJC.png" alt="Tower System Render" style="max-width: 100%; width: 600px;">
+
+        <h3>Technical Highlights:</h3>
+        <ul>
+            <li><b>Modular Logic:</b> Engineered a C++ based attachment system allowing for 3 unique weapon slots per tower base.</li>
+            <li><b>3D Asset Creation:</b> Modeled and UV-mapped prototype assets in Blender for rapid testing in UE5.</li>
+            <li><b>Gameplay Interaction:</b> Scripted logic for weapon combinations that produce unique status effects or damage buffs.</li>
+        </ul>
+        <p><a href="sip.html">View Detailed Project Documentation &rarr;</a></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>[Your Second Project Title Here]</h2>
+        <p><b>Role:</b> [Your Role]</p>
+        <p><b>Tools:</b> [List Tools]</p>
+        
+        <p><i>Upload your next screenshot to see it here!</i></p>
+
+        <h3>Technical Highlights:</h3>
+        <ul>
+            <li>Detail a specific problem you solved.</li>
+            <li>Explain a technical tool or language you used.</li>
+            <li>Mention the outcome or goal achieved.</li>
+        </ul>
+    </section>
+
 </body>
 </html>
