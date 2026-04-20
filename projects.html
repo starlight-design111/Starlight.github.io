@@ -10,9 +10,11 @@
         section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 50px; }
         h1 { text-align: center; color: #2c3e50; }
         h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #e67e22; }
+        h3 { margin-top: 25px; color: #34495e; }
         .badge { background: #34495e; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.85em; font-weight: bold; margin-right: 5px; }
         .image-gallery { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; justify-content: center; }
-        .image-gallery img { border-radius: 8px; border: 1px solid #ddd; width: 48%; min-width: 300px; height: auto; }
+        .image-gallery img { border-radius: 8px; border: 1px solid #ddd; width: 48%; min-width: 300px; height: auto; transition: transform 0.2s; }
+        .image-gallery img:hover { transform: scale(1.02); }
         .project-meta { font-style: italic; color: #7f8c8d; margin-bottom: 20px; }
     </style>
 </head>
@@ -33,16 +35,17 @@
         <p class="project-meta"><b>Role:</b> 3D Artist & Technical Artist | <b>Tools:</b> Unity 2022, Blender, VRChat SDK</p>
         
         <h3>Asset Creation (Blender)</h3>
-        <p>I modeled all geometry and props shown below. The UV checker map demonstrates my focus on consistent texture density and optimized layouts for lightmap baking.</p>
+        <p>Modeled 100% of the geometry and props. The UV checker map verifies consistent texture density for optimized lighting bakes.</p>
         <div class="image-gallery">
-            <img src="blender_hDcOUrbzgQ.jpg" alt="Blender Solid Model">
-            <img src="blender_PjoN1FGTdQ.jpg" alt="Blender UV Checker Map">
+            <img src="blender_hDcOUrbzgQ.jpg" alt="Blender Model View">
+            <img src="blender_PjoN1FGTdQ.jpg" alt="UV Checker Map View">
         </div>
 
-        <h3>Implementation & Lighting (Unity)</h3>
+        <h3>Implementation & Lighting (Unity 2022)</h3>
+        <p>Implemented light probe networks to ensure avatars receive accurate color data from the emissive panels.</p>
         <div class="image-gallery">
-            <img src="Unity_jErd7410Bq.jpg" alt="Unity View 1">
-            <img src="Unity_kuXUYbycMl.jpg" alt="Unity View 2">
+            <img src="Unity_jErd7410Bq.jpg" alt="Unity Interior View 1">
+            <img src="Unity_kuXUYbycMl.jpg" alt="Unity Interior View 2">
         </div>
     </section>
 
@@ -51,17 +54,17 @@
         <p class="project-meta"><b>Role:</b> Technical Designer | <b>Tools:</b> Unreal Engine 5.3, Blueprints</p>
         
         <div class="image-gallery">
-            <img src="UnrealEditor_Cq9ryNkBjW.jpg" alt="Maze Overhead" style="width: 100%;">
+            <img src="UnrealEditor_Cq9ryNkBjW.jpg" alt="Maze Overhead View" style="width: 100%;">
         </div>
 
         <h3>Technical Highlights:</h3>
         <ul>
-            <li><b>Interaction System:</b> Engineered a Line Tracing system for responsive 'E' key interactions.</li>
-            <li><b>Logic:</b> Developed a color-matching check comparing player state to environmental requirements.</li>
+            <li><b>Interaction System:</b> Engineered a Line Tracing system for precise 'E' key interaction detection.</li>
+            <li><b>Color Matching Logic:</b> Developed the verification logic comparing player state variables against door criteria.</li>
         </ul>
         <div class="image-gallery">
-            <img src="UnrealEditor_TZbECl4MfG.jpg" alt="Player Perspective">
-            <img src="UnrealEditor_AEWiGQnbJk.jpg" alt="Maze Logic Layout">
+            <img src="UnrealEditor_TZbECl4MfG.jpg" alt="First Person View">
+            <img src="UnrealEditor_AEWiGQnbJk.jpg" alt="Level Progression Layout">
         </div>
     </section>
 
