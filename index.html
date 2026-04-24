@@ -2,18 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | SIP Portfolio</title>
+    <title>Starlight | Game Design Portfolio</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: auto; background-color: #f4f4f4; color: #333; }
+        nav { margin-bottom: 30px; border-bottom: 2px solid #ddd; padding-bottom: 15px; text-align: center; }
+        nav a { margin: 0 10px; text-decoration: none; color: #2c3e50; font-weight: bold; }
+        
+        /* Hero Section */
+        .hero { 
+            background: white; 
+            padding: 60px 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            text-align: center; 
+            margin-bottom: 40px;
+        }
+        .hero h1 { font-size: 3em; color: #2c3e50; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; color: #7f8c8d; max-width: 700px; margin: auto; }
+        
+        /* Skills/Intro Grid */
+        .grid { display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            flex: 1; 
+            min-width: 280px; 
+            text-align: center; 
+        }
+        .card h3 { color: #e67e22; margin-top: 0; }
+        
+        /* Call to Action Button */
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .cta-btn:hover { background-color: #d35400; }
+    </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Homepage</a> | 
-        <a href="projects.html">Portfolio/Boards Projects</a> | 
+        <a href="projects.html">Portfolio</a> | 
         <a href="objectives.html">Objectives</a> | 
         <a href="sip.html">SIP Project</a> | 
-        <a href="about.html">About/Contact</a>
+        <a href="about.html">Contact</a>
     </nav>
 
-    <h1>Welcome to My Professional Portfolio</h1>
-    <p>This site hosts my academic projects, SIP documentation, and professional objectives.</p>
+    <header class="hero">
+        <h1>Starlight</h1>
+        <p>Technical Game Designer | UI & VFX Artist | Student at UAT</p>
+        <a href="projects.html" class="cta-btn">View My Work</a>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Technical Design</h3>
+            <p>Specializing in Unreal Engine 5 Blueprints, Line Tracing systems, and interactive gameplay mechanics.</p>
+        </div>
+        
+        <div class="card">
+            <h3>Environment Art</h3>
+            <p>Expertise in full-pipeline 3D modeling in Blender, UV optimization, and baked lighting in Unity.</p>
+        </div>
+
+        <div class="card">
+            <h3>Industry Ready</h3>
+            <p>Professional experience as a UI/VFX artist at Farm Land, working within studio production pipelines.</p>
+        </div>
+    </div>
+
+    <footer style="text-align: center; color: #95a5a6; font-size: 0.9em; margin-top: 60px;">
+        <p>&copy; 2026 | Technical Game Design Portfolio</p>
+    </footer>
+
 </body>
 </html>
